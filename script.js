@@ -3,17 +3,29 @@ const overlay = document.getElementById('overlay');
 const mainContent = document.getElementById('mainContent');
 const paymentInterface = document.getElementById('paymentInterface');
 const plansContainer = document.getElementById('plansContainer');
+const videoContainer = document.getElementById('paymentVideoContainer');
+const iframe = document.getElementById('paymentIframe');
 
 const prices = {
     "MOD IOS": { "5 dias": "24,00$", "7 dias": "27$", "15 dias": "47$" },
     "MOD ANDROID": { "5 dias": "24,00$", "7 dias": "27$", "15 dias": "47$" },
     "HS PEITO IOS": { "5 dias": "26,00$", "7 dias": "30,00$", "15 dias": "44,00$" },
-    "HS PEITO ANDROID": { "5 dias": "17,00$", "7 dias": "27,00$", "15 dias": "44,00$" }
+    "HS PEITO ANDROID": { "5 dias": "17,00$", "7 dias": "27$", "15 dias": "44,00$" }
 };
 
 function openPayment(name, img) {
     document.getElementById('paymentProductTitle').innerText = name;
     document.getElementById('paymentProductImg').src = img || "https://i.ibb.co/Y4YG8t0z/1000122868.jpg";
+    
+    // Lógica do vídeo exclusivo para IOS
+    if (name === "MOD IOS") {
+        videoContainer.style.display = 'block';
+        iframe.src = "https://www.youtube.com/embed/H3JPyFBMF58";
+    } else {
+        videoContainer.style.display = 'none';
+        iframe.src = "";
+    }
+
     const p = prices[name];
     plansContainer.innerHTML = `
         <div class="plan-box grow-on-hover"><span>5 DIAS</span><span class="plan-price" style="color:#00ff00">${p["5 dias"]}</span><div class="buy-mini-box">COMPRAR</div></div>
@@ -23,6 +35,7 @@ function openPayment(name, img) {
     mainContent.style.display = 'none';
     paymentInterface.style.display = 'block';
     document.body.classList.add('payment-active');
+    window.scrollTo(0,0);
 }
 
 document.getElementById('backToStore').onclick = () => {
