@@ -17,6 +17,7 @@
         </div>
         <nav class="sidebar-nav">
             <a href="#" class="nav-item active" id="menuHome"><i class="fas fa-home"></i> Home</a>
+            
             <div class="menu-item-with-sub">
                 <a href="#" class="nav-item" id="menuVisual"><i class="fas fa-palette"></i> Visual <i class="fas fa-chevron-down"></i></a>
                 <div class="sub-menu" id="subMenuVisual">
@@ -37,7 +38,7 @@
             </button>
             <div class="logo-area-central">
                 <div class="logo-circle-img grow-on-hover">
-                    <img src="https://i.ibb.co/HfqKfpgp/IMG-20260302-005923-957.jpg" alt="Logo">
+                    <img src="https://i.ibb.co/HfqKfpgp/IMG-20260302-005923-957.jpg" alt="Logo Gabzin">
                 </div>
                 <h1 class="glow-text">GABZIN MODZ FF</h1>
             </div>
@@ -86,8 +87,8 @@
         </section>
 
         <div class="products-row">
-            <div class="product-card-simple product-item ios grow-on-hover" data-product="MOD IOS" data-img="https://i.ibb.co/jPcyZ8Jn/1772424755847.png">
-                <div class="product-img-wrapper"><img src="https://i.ibb.co/jPcyZ8Jn/1772424755847.png"></div>
+            <div class="product-card-simple product-item ios grow-on-hover" data-product="MOD IOS" data-img="https://i.ibb.co/5hnH63JQ/Screenshot-20260302-012833-Gallery.jpg">
+                <div class="product-img-wrapper"><img src="https://i.ibb.co/5hnH63JQ/Screenshot-20260302-012833-Gallery.jpg"></div>
                 <h3>MOD IOS</h3>
             </div>
             <div class="product-card-simple product-item android grow-on-hover" data-product="MOD ANDROID" data-img="https://i.ibb.co/Y4L3B9Lb/Screenshot-20260228-171903-Gallery.jpg">
@@ -95,12 +96,18 @@
                 <h3>MOD ANDROID</h3>
             </div>
 
-            <div class="product-card-large product-item ios neon-flow grow-on-hover" data-product="HS PEITO IOS" data-img="">
-                <div class="large-img-wrapper"><div class="animated-bg-overlay"></div><span>HS PEITO IOS</span></div>
+            <div class="product-card-large product-item ios neon-purple-card grow-on-hover" data-product="HS PEITO IOS" data-img="https://i.ibb.co/HfqKfpgp/IMG-20260302-005923-957.jpg">
+                <div class="large-img-wrapper">
+                    <img src="https://i.ibb.co/HfqKfpgp/IMG-20260302-005923-957.jpg" class="logo-hs">
+                    <span>HS PEITO IOS</span>
+                </div>
                 <h3>HS PEITO IOS</h3>
             </div>
-            <div class="product-card-large product-item android neon-flow grow-on-hover" data-product="HS PEITO ANDROID" data-img="">
-                <div class="large-img-wrapper"><div class="animated-bg-overlay"></div><span>HS PEITO ANDROID</span></div>
+            <div class="product-card-large product-item android neon-purple-card grow-on-hover" data-product="HS PEITO ANDROID" data-img="https://i.ibb.co/HfqKfpgp/IMG-20260302-005923-957.jpg">
+                <div class="large-img-wrapper">
+                    <img src="https://i.ibb.co/HfqKfpgp/IMG-20260302-005923-957.jpg" class="logo-hs">
+                    <span>HS PEITO ANDROID</span>
+                </div>
                 <h3>HS PEITO ANDROID</h3>
             </div>
         </div>
@@ -109,15 +116,14 @@
     <div class="container payment-interface" id="paymentInterface" style="display: none;">
         <div class="payment-card-outer">
             <div class="payment-card">
-                <button class="back-btn grow-on-hover" id="backToStore"><i class="fas fa-arrow-left"></i> Voltar</button>
-                
+                <button class="back-btn grow-on-hover" id="backToStore">Voltar <i class="fas fa-arrow-right"></i></button>
                 <div class="payment-header-img">
                     <img id="paymentProductImg" src="">
                     <h2 id="paymentProductTitle">PRODUTO</h2>
                 </div>
                 
-                <div id="paymentVideoContainer" style="display:none; margin-top:15px;">
-                    <div class="video-container" style="border: 2px solid #9933ff;">
+                <div id="paymentVideoContainer" style="display:none; margin-bottom:15px;">
+                    <div class="video-container" style="border-color: #9933ff;">
                         <iframe id="paymentIframe" src="" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
@@ -125,6 +131,18 @@
                 <p class="payment-subtitle">SELECIONE O PLANO E PAGUE AGORA!</p>
                 <div class="plans-container" id="plansContainer"></div>
             </div>
+        </div>
+
+        <div class="security-blocks">
+            <div class="neon-block-blue grow-on-hover"><p>sua compra é 100% segura.</p></div>
+            <div class="neon-block-blue grow-on-hover"><p>VOCÊ RECEBE 7DIAS DE GARANTIA E A QUALQUER MOMENTO PODE PEDIR REEMBOLSO SE NÃO GOSTAR DO PRODUTO.</p></div>
+            <div class="neon-block-blue grow-on-hover"><p>SEU PRODUTO CHEGA INSTANTANEAMENTE NO SEU E-MAIL APÓS A COMPRA.</p></div>
+        </div>
+
+        <div class="scroll-top-area">
+            <button class="scroll-top-btn grow-on-hover" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <i class="fas fa-chevron-up"></i>
+            </button>
         </div>
     </div>
 
