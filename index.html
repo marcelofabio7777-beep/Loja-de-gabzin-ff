@@ -10,29 +10,28 @@
 <body class="theme-red">
 
     <div class="sidebar" id="sidebar">
-        <button class="close-btn" id="closeMenu">&times;</button>
+        <button class="close-btn" id="closeMenu" style="background:none; border:none; color:white; font-size:30px; position:absolute; right:20px; top:10px;">&times;</button>
         <div class="sidebar-header">
-            <div class="lock-icon"><i class="fas fa-lock"></i></div>
-            <p>Menu</p>
+            <div class="lock-icon" style="text-align:center; font-size:40px; color:var(--theme); margin-bottom:10px;"><i class="fas fa-lock"></i></div>
+            <p style="text-align:center; font-weight:bold;">MENU GABZIN</p>
         </div>
-        <nav class="sidebar-nav">
-            <a href="#" class="nav-item active" id="menuHome"><i class="fas fa-home"></i> Home</a>
-            
+        <nav class="sidebar-nav" style="margin-top:30px; display:flex; flex-direction:column; gap:15px;">
+            <a href="#" class="nav-item active" id="menuHome" style="color:white; text-decoration:none; font-size:18px;"><i class="fas fa-home"></i> Home</a>
             <div class="menu-item-with-sub">
-                <a href="#" class="nav-item" id="menuVisual"><i class="fas fa-palette"></i> Visual <i class="fas fa-chevron-down"></i></a>
-                <div class="sub-menu" id="subMenuVisual">
-                    <a href="#" class="sub-nav-item" id="btnRed">Vermelho</a>
-                    <a href="#" class="sub-nav-item" id="btnBlue">Azul</a>
-                    <a href="#" class="sub-nav-item" id="btnPurple">Roxo</a>
-                    <a href="#" class="sub-nav-item" id="btnGreen">Verde</a>
+                <a href="#" class="nav-item" id="menuVisual" style="color:white; text-decoration:none; font-size:18px;"><i class="fas fa-palette"></i> Visual <i class="fas fa-chevron-down"></i></a>
+                <div class="sub-menu" id="subMenuVisual" style="display:none; padding-left:20px; margin-top:10px; flex-direction:column; gap:10px;">
+                    <a href="#" class="sub-nav-item" id="btnRed" style="color:#ff3333; text-decoration:none;">Vermelho</a>
+                    <a href="#" class="sub-nav-item" id="btnBlue" style="color:#0055ff; text-decoration:none;">Azul</a>
+                    <a href="#" class="sub-nav-item" id="btnPurple" style="color:#9933ff; text-decoration:none;">Roxo</a>
+                    <a href="#" class="sub-nav-item" id="btnGreen" style="color:#00cc44; text-decoration:none;">Verde</a>
                 </div>
             </div>
         </nav>
     </div>
-    <div class="overlay" id="overlay"></div>
+    <div class="overlay" id="overlay" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); display:none; z-index:1000;"></div>
 
     <header>
-        <div class="container header-content">
+        <div class="container header-content" style="display:flex; align-items:center; justify-content:center; position:relative; padding-top:20px;">
             <button class="menu-toggle neon-border-box" id="openMenu">
                 <i class="fas fa-bars"></i>
             </button>
@@ -46,14 +45,14 @@
     </header>
 
     <main class="container" id="mainContent">
-        <section class="hero grow-on-hover" id="homeSection">
-            <p class="video-label">Demonstração do painel VIP mais barato</p>
+        <section class="hero grow-on-hover" id="homeSection" style="margin-top:30px;">
+            <p class="video-label" style="text-align:center; margin-bottom:10px; color:var(--theme); font-weight:bold;">Demonstração do painel VIP mais barato</p>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/kRZ1hLNjud0" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
 
-        <h2 class="section-title">✨ Vantagens exclusivas ✨</h2>
+        <h2 class="section-title" style="text-align:center; margin:30px 0;">✨ Vantagens exclusivas ✨</h2>
         <div class="cards-grid">
             <div class="card grow-on-hover"><i class="fas fa-truck icon-theme"></i><h3>Entrega Imediata</h3><p>Liberação automática</p></div>
             <div class="card grow-on-hover"><i class="fas fa-comments icon-theme"></i><h3>Suporte 24h</h3><p>Atendimento via WhatsApp</p></div>
@@ -61,22 +60,8 @@
             <div class="card grow-on-hover"><i class="fas fa-sync icon-theme"></i><h3>Atualizações</h3><p>Grátis e sem custo</p></div>
         </div>
 
-        <section class="how-it-works">
-            <h2 class="section-title">Como funciona a compra?</h2>
-            <div class="steps-container">
-                <div class="step-card grow-on-hover">
-                    <span class="step-num">1</span>
-                    <div><h4>Escolha</h4><p>Selecione seu painel favorito.</p></div>
-                </div>
-                <div class="step-card grow-on-hover">
-                    <span class="step-num">2</span>
-                    <div><h4>Receba</h4><p>O link chega no seu e-mail.</p></div>
-                </div>
-            </div>
-        </section>
-
         <section class="filter-box" id="filterSection">
-            <h2 class="title-theme">Filtrar Produtos</h2>
+            <h2 class="title-theme" style="color:var(--theme); margin-bottom:15px;">Filtrar Produtos</h2>
             <div class="filter-group">
                 <div class="btn-group">
                     <button class="f-btn active grow-on-hover" data-filter="all">Todos</button>
@@ -116,31 +101,31 @@
     <div class="container payment-interface" id="paymentInterface" style="display: none;">
         <div class="payment-card-outer">
             <div class="payment-card">
-                <button class="back-btn grow-on-hover" id="backToStore">Voltar <i class="fas fa-arrow-right"></i></button>
+                <button class="back-btn grow-on-hover" id="backToStore" style="width:100%; margin-bottom:20px;">Voltar à Loja <i class="fas fa-undo"></i></button>
                 <div class="payment-header-img">
-                    <img id="paymentProductImg" src="">
+                    <img id="paymentProductImg" src="" style="width:150px; height:150px; border-radius:15px; border:3px solid var(--theme); margin-bottom:10px;">
                     <h2 id="paymentProductTitle">PRODUTO</h2>
                 </div>
                 
-                <div id="paymentVideoContainer" style="display:none; margin-bottom:15px;">
-                    <div class="video-container" style="border-color: #9933ff;">
+                <div id="paymentVideoContainer" style="display:none; margin: 20px 0;">
+                    <div class="video-container" style="border-color: var(--purple-neon);">
                         <iframe id="paymentIframe" src="" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
 
-                <p class="payment-subtitle">SELECIONE O PLANO E PAGUE AGORA!</p>
-                <div class="plans-container" id="plansContainer"></div>
+                <p class="payment-subtitle" style="margin:20px 0; font-weight:bold; color:var(--theme);">SELECIONE O PLANO E PAGUE AGORA!</p>
+                <div class="plans-container" id="plansContainer" style="display:flex; flex-direction:column; gap:10px;"></div>
             </div>
         </div>
 
         <div class="security-blocks">
-            <div class="neon-block-blue grow-on-hover"><p>sua compra é 100% segura.</p></div>
-            <div class="neon-block-blue grow-on-hover"><p>VOCÊ RECEBE 7DIAS DE GARANTIA E A QUALQUER MOMENTO PODE PEDIR REEMBOLSO SE NÃO GOSTAR DO PRODUTO.</p></div>
-            <div class="neon-block-blue grow-on-hover"><p>SEU PRODUTO CHEGA INSTANTANEAMENTE NO SEU E-MAIL APÓS A COMPRA.</p></div>
+            <div class="neon-block-blue grow-on-hover"><p>Sua compra é 100% segura via Mercado Pago.</p></div>
+            <div class="neon-block-blue grow-on-hover"><p>VOCÊ RECEBE 7 DIAS DE GARANTIA E PODE PEDIR REEMBOLSO.</p></div>
+            <div class="neon-block-blue grow-on-hover"><p>O LOGIN CHEGA INSTANTANEAMENTE NO SEU E-MAIL.</p></div>
         </div>
 
-        <div class="scroll-top-area">
-            <button class="scroll-top-btn grow-on-hover" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <div style="text-align:center; padding:40px 0;">
+             <button class="scroll-top-btn grow-on-hover" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                 <i class="fas fa-chevron-up"></i>
             </button>
         </div>
